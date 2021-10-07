@@ -1,0 +1,147 @@
+:root {
+    --mobile-width: 375px;
+    --desktop-width: 1440px;
+
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+
+    --font-size: 1rem;
+
+    --font-weight-500: 500;
+    --font-weight-700: 700;
+    --font-weight-900: 900;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body, h1, h2, h3, h4, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--pale-blue);
+    background-image: url('images/pattern-background-mobile.svg');
+    background-repeat: no-repeat;
+    font-family: 'Red Hat Display', sans-serif;
+    height: 100vh;
+}
+
+p {
+    font-size: var(--font-size);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/********** MAGIC **********/
+
+main {
+    margin: 0 auto;
+    max-width: 375px;
+    height: 100%;
+    padding: 5em 1.5em;
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+}
+
+.hero {
+    border-radius: 20px 20px 0 0;
+}
+
+.content {
+    padding: 2em;
+}
+
+.summary {
+    color: var(--dark-blue);
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: var(--font-weight-900);
+}
+
+.summary-desc {
+    margin: 1em 0;
+    color: var(--desaturated-blue);
+    text-align: center;
+    font-weight: var(--font-weight-500);
+    line-height: 1.5em;
+}
+
+.buy {
+    background: var(--very-pale-blue);
+    border-radius: 10px;
+    padding: 1em;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+.annual {
+    font-weight: var(--font-weight-900);
+    color: var(--dark-blue);
+    font-size: 0.9em;
+}
+
+.price {
+    font-size: 0.8em;
+    color: var(--desaturated-blue);
+}
+
+.buy a {
+    color: var(--bright-blue);
+    margin-left: auto;
+    font-weight: var(--font-weight-700);
+}
+
+.buy a:hover {
+    text-decoration: none;
+    opacity: 50%;
+}
+
+.footer button  {
+    cursor: pointer;
+    border-radius: 10px;
+    width: 100%;
+    padding: 1em 0;
+    font-size: 1em;
+    font-weight: var(--font-weight-700);
+    border: none;
+}
+
+.proceed {
+    background: var(--bright-blue);
+    color: white;
+    box-shadow: 0 20px 20px 0 var(--pale-blue);
+}
+
+.proceed:hover {
+    opacity: 50%;
+}
+
+.cancel {
+    color: var(--desaturated-blue);
+    background: transparent;
+}
+
+.cancel:hover {
+    color: var(--dark-blue);
+}
+
+@media screen and (min-width: 375px) {
+    body {
+        background-image: url('images/pattern-background-desktop.svg');
+    }
+}
